@@ -126,7 +126,7 @@ def book(isbn):
 			bookinfo=db.execute("SELECT * FROM books WHERE isbn= :isbn",{"isbn":isbn}).fetchall()
 			#goodreads review
 
-			response=requests.get("https://www.goodreads.com/book/review_counts.json",params={"key":'A3D8TXrW82vnrssWEcAAyQ',"isbns":isbn}).json()
+			response=requests.get("https://www.goodreads.com/book/review_counts.json",params={"key":'12345678',"isbns":isbn}).json()
 		
 			response=response['books'][0]
 			bookinfo.append(response)
