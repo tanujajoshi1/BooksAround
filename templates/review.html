@@ -1,0 +1,206 @@
+<!Doctype html>
+<html>
+<head>
+	 <meta charset=utf8 name=viewport content="width=device-width , initial-scale=1.0">
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"> <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+	<title>{{bookinfo[0].title}}</title>
+<style>
+	   nav>i {
+            color: white;
+            padding: 10px;
+           
+        }
+
+        nav> i>a{
+        	color:white;
+        	font-size: 20px;
+        	padding: 10px;
+        	font-family: serif;
+
+        }
+ .navbar-brand{
+      	font-family:"Lobster",serif;
+      	font-size: xx-large;
+      	color:black;
+      	text-align: center;
+      	
+      }
+ main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+.card-body {
+    text-align: start;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.book-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-border {
+    border-color: #ECDB88;
+    border-style: solid;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+button{
+      	color:white;
+      	background-color: #cc6699;
+      	border-radius: 8px;
+      	border-color:#cc6699;
+      	padding:10px 20px;
+      	display:block;
+      	margin:0 auto;
+      }
+
+main
+{
+    /* scroll horizontally as needed */
+   
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+</style>
+</head>
+	<nav class="navbar navbar-light navbar pink">
+ <i class="fa fa-book-open fa-3x" aria-hidden="true"> <a  href="{{url_for('index')}}">Home</a>
+   <a href="{{url_for('logout')}}">Logout</a></i>
+<div class="navbar-brand">BooksAround</div>
+<i style="float:right" class="fa fa-search fa-lg" aria-hidden="True"><a href="{{url_for('user')}}">Search</a></i>
+  <i style="float=right" class ="fa fa-user fa-3x" aria-hidden="true"><a href="#">{{user}}</a>
+  </i> 
+</nav>
+
+<br/><br/>
+<body>
+	
+       
+            
+        
+<main class="container">
+	<div class="row book-container">
+        <div class="col-sm-4">
+            <img src="http://covers.openlibrary.org/b/isbn/{{bookinfo[0].isbn}}-M.jpg" width="130px">    
+        </div>
+        <div class="col-sm-4">
+            <h1 style="font-weight: bold">{{bookinfo[0].title}}</h1>
+            <h5>Author: {{bookinfo[0].author}}</h5>
+            <h5>Published: {{bookinfo[0].year}}</h5>
+            <h5>ISBN-10: {{bookinfo[0].isbn}}</h5>
+        </div>
+
+        <!--GOODREADS REVIEWS -->
+        <div class="col-sm-4">
+            <img class="mb-3" src="../static/goodreads.jpg" alt="Goodreads" width="200" height="45">
+            <h5>No of Ratings: {{bookinfo[1].work_ratings_count}}</h5>
+            <h5>Average Rating: {{bookinfo[1].average_rating}}</h5>
+            <h5>
+                <a href="https://www.goodreads.com/search?q={{bookinfo[0].title}}">Goodreads page</a>
+            </h5>
+        </div>
+    </div>
+    <div class="dropdown-divider"></div>
+
+    <h4 style="font-weight:bold" class="alert alert-warning">Users Reviews</h4>
+    <h5 style="font-weight:bold">Write your review for this book!</h5>
+    {% with messages= get_flashed_messages()%}
+          {% if messages%}
+          {% for message in messages%}
+                  <div class="alert alert-info text-center" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+                  {message}
+				</div>                 
+           {% endfor %}
+           {% endif %}
+           {% endwith %}
+
+    <div>
+        <!-- REVIEW FORM -->
+        <form method="POST"  class="form-border">
+            <div class="form-row">
+                <div class="form-group col-sm">
+                    <label for="rating" style="font-weight: bold">Rate this book</label>
+                    <select id="rating" name="rating" class="form-control" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option selected value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-6">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Say something</span>
+                        </div>
+                        <textarea name="comment" id="comment" class="form-control" rows="1" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group col-sm">
+                    <button  type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- REVIEW LIST -->
+        <div id="userReviews">
+            <h2></h2>
+            {% for review in reviews %}
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1" style="color:brown; font-weight: bold">{{review.username}}</h6>
+                        
+                    </div>
+                    <p style="color:black;"class="mb-1">{{review.comment}}</p>
+                    <h4 style="color:black;">Rated: {{review.rating}}</h4>
+                </a>
+                <div class="dropdown-divider"></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+</body>
+</html>

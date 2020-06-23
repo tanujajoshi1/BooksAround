@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=utf8 name=viewport content="width=device-width , initial-scale=1.0">
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"> <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <title>BooksAround</title>
+    <style>
+       
+        .navbar {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          
+            
+        }
+       
+        nav>i {
+            color: white;
+            padding: 10px;
+           
+        }
+       nav> i>a{
+        	color:white;
+        	font-size: 20px;
+        	padding: 15px;
+        	font-family: serif;
+
+        }
+      .navbar-brand{
+      	font-family:"Lobster",serif;
+      	font-size: 90px;
+      	
+      	letter-spacing: 2px;
+      	
+      }
+        
+        .parallax1 {
+            background: url("../static/pic1.jpg") no-repeat ;
+            background-attachment: fixed;
+            background-size: cover;
+            height:500px;
+            margin-top: 5%;
+            
+
+        }
+        .parallax2 {
+            background: url("../static/pic3.jpg") no-repeat ;
+            background-attachment: fixed;
+            background-size: cover;
+           
+            height:500px;
+        }
+        .parallax3 {
+            background: url("../static/pic4.jpg") no-repeat ;
+            background-attachment: fixed;
+            background-size: cover;
+            
+            height:500px;
+        }
+       .parallax4 {
+            background: url("../static/pic2.jpg") no-repeat ;
+            background-attachment: fixed;
+            background-size: cover;
+          
+            height:500px;
+        }
+        
+
+       p{
+            font-family: 'Tangerine', serif;
+        font-size: 45px;
+        font-weight: 700;
+        text-align: center;
+        color: #263238;
+    }
+     #p2{
+    	font-size: 40px;
+        font-weight: 300;
+        
+        color: black;
+    }
+
+       
+    </style>
+
+</head>
+
+<!--Navbar-->
+<nav class="navbar navbar-light navbar pink">
+ <i class="fa fa-book-open fa-3x" aria-hidden="true"> <a  href="{{url_for('register')}}">Register</a>
+   <a href="{{url_for('login')}}">Login</a></i>
+
+<div class="navbar-brand" style="color: black">BooksAround</div>
+  <!-- Collapse button -->
+   <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+    aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-2x"></i></span></button>
+  
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url_for('register')}}">Register</a>
+      </li>
+    </ul>
+    <!-- Links -->
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+<br/>
+
+<body>
+
+ <div class="container-fluid">
+     <p>“It's the possibility of having a dream come true that makes life interesting.”<br/>-The Alchemist</p>
+     <div class="parallax1"> </div>
+     <p id=p2 >“Good friends, good books, and a sleepy conscience: this is the ideal life.”
+      <br/>― Mark Twain</p>
+       <div class="parallax2"></div>
+       <p id=p2> “I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”<br/>― Marilyn Monroe </p>
+       <div class="parallax3"></div>
+        <p id=p2> “Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.”
+         <br/>― Martin Luther King Jr</p>
+       <div class="parallax4"></div>
+       
+ </div>
+ <br/>
+ <br/>
+    <!-- Footer -->
+   
+
+</body>
+<!-- Footer -->
+<footer class="page-footer font-small white -3">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg black-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fab fa-pinterest fa-lg black-text fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="color: black">© 2020 Copyright:
+    <a href="#" style="color: blue"> tanujajoshi24</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+</html>
