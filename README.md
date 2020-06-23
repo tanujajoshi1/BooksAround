@@ -11,6 +11,6 @@ The project uses postgresql database system and GOODREADS API.
 <li>A page will be rendered where user can search any book by its isbn OR title OR author OR the year of publishing</li>
 <li>A list of books matching the search input will appear</li>
 <li>user can go to any of the page and will be directed to the page showing all the information  of the book through the GOODREADS API</li>
-<li>also User has the accessibility to give rating and review for that book</li>
+<li>Also, user has the accessibility to give rating and review for that book</li>
 
 
