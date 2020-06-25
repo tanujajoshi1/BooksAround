@@ -45,13 +45,22 @@
         	font-family: serif;
 
         }
+        @media screen and (min-width:601px){
       .navbar-brand{
       	font-family:"Lobster",serif;
-      	font-size: 90px;
-      	
+      	font-size: 90px;      	
       	letter-spacing: 2px;
       	
       }
+  }
+    @media screen and (max-width:600px){
+      .navbar-brand{
+      	font-family:"Lobster",serif;
+      	font-size: 50px;      	
+      	letter-spacing: 1px;
+      	
+      }
+  }
         
         .parallax1 {
             background: url("../static/pic1.jpg") no-repeat ;
@@ -69,18 +78,11 @@
            
             height:500px;
         }
-        .parallax3 {
-            background: url("../static/pic4.jpg") no-repeat ;
-            background-attachment: fixed;
-            background-size: cover;
-            
-            height:500px;
-        }
+        
        .parallax4 {
-            background: url("../static/pic2.jpg") no-repeat ;
+       	    background: url("../static/pic4.jpg") no-repeat ;
             background-attachment: fixed;
             background-size: cover;
-          
             height:500px;
         }
         
@@ -98,7 +100,7 @@
         
         color: black;
     }
-
+}
        
     </style>
 
@@ -141,13 +143,13 @@
 
  <div class="container-fluid">
      <p>“It's the possibility of having a dream come true that makes life interesting.”<br/>-The Alchemist</p>
+     <p id=p2>“Writing fiction is the act of weaving a series of lies to arrive at a greater truth.”
+i<br/>― Khaled Hossein</p>
      <div class="parallax1"> </div>
      <p id=p2 >“Good friends, good books, and a sleepy conscience: this is the ideal life.”
       <br/>― Mark Twain</p>
        <div class="parallax2"></div>
-       <p id=p2> “I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”<br/>― Marilyn Monroe </p>
-       <div class="parallax3"></div>
-        <p id=p2> “Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.”
+               <p id=p2> “Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate: only love can do that.”
          <br/>― Martin Luther King Jr</p>
        <div class="parallax4"></div>
        

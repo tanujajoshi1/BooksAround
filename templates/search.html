@@ -32,15 +32,25 @@
         	font-family: serif;
 
         }
- .navbar-brand{
-      	font-family:"Lobster",serif;
-      	font-size: xx-large;
+        @media screen and (min-width:601px){
+      .navbar-brand{
+      	 	font-family:"Lobster",serif;
+      	font-size: 100px;
       	color:black;
       	text-align: center;
-      	letter-spacing: 2px;
-      	word-spacing: 3px;
       	
       }
+  }
+    @media screen and (max-width:600px){
+      .navbar-brand{
+       	font-family:"Lobster",serif;
+      	font-size: 60px;
+      	color:black;
+      	text-align: center;
+      	
+      }
+  }
+   
       button{
       	color:white;
       	background-color: #cc6699;

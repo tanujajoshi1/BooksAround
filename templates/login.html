@@ -26,7 +26,7 @@
 html,body{
 background-image: url("../static/flight-landscape-nature-sky-36717.jpg");
 background-size: cover;
-background-repeat: no-repeat;
+background-attachment: fixed;
 height: 100%;
 font-family: 'Numans', sans-serif;
 
@@ -111,7 +111,7 @@ background-color: white;
 
 
 .navbar {
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: sans-serif;
             color: black;
         }
        
@@ -119,8 +119,8 @@ background-color: white;
             color: white;
             padding: 10px;
         }
-      
-        
+  
+     
 
 
 </style>
@@ -129,8 +129,9 @@ background-color: white;
 
     </head>
     <nav class="navbar navbar-light navbar-1 white">
- <i class="fa fa-book-open fa-2x" aria-hidden="true" style="padding: 10px"> BooksAround</i>
-<i style="float: right" class="fa fa-home fa-lg" aria-hidden="true"><a href="{{url_for('index')}}" style="color: white;padding: 10px">Home</a></i>
+ <i class="fa fa-book-open fa-lg" aria-hidden="true" style="padding: 10px;"> BooksAround</i>
+ 
+<i style="float: right" class="fa fa-home fa-1x" aria-hidden="true"><a href="{{url_for('index')}}" style="color: white;padding: 10px">Home</a></i>
   
   <!-- Collapsible content -->
 
