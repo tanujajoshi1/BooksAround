@@ -19,7 +19,7 @@ The project uses postgresql database system and GOODREADS API.
   <li>PostgreSQL</li>
   <li>HTML5</li>
   <li>CSS3</LI>
-
+</Ol>
 
 
 
