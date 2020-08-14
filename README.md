@@ -13,13 +13,6 @@ The project uses postgresql database system and GOODREADS API.
 <li>user can go to any of the page and will be directed to the page showing all the information  of the book through the GOODREADS API</li>
 <li>Also, user has the accessibility to give rating and review for that book</li>
 </ol>
-## Tool and Technologies?
-<ol>
-  <li>Flask</li>
-  <li>PostgreSQL</li>
-  <li>HTML5</li>
-  <li>CSS3</LI>
-</Ol>
 
 
 
