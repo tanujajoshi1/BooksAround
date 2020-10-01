@@ -5,7 +5,7 @@ Video link: https://youtu.be/8_ts9aiDahk
 Booksaround,a completely self made project is based on flask. Flask is a microframework of python. Therefore this project gives an insight to flask as well as the practical application of python.
 The project uses postgresql database system and GOODREADS API.
 
-![image](pic1.png)
+
 ![image](pic2.png)
 ## What the project is all about?
 <ol>
