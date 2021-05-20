@@ -1,6 +1,6 @@
 # BooksAround
 
-Video link: https://youtu.be/8_ts9aiDahk
+
 
 ![image](pic2.png)
 
